@@ -8,9 +8,6 @@ services:
       - ./keyfile:/etc/keyfile
       - ./replication-mongo.sh:/start.sh
     command: bash start.sh
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 123456
     ports:
       - 27017:27017
   mongo1:
@@ -20,9 +17,6 @@ services:
       - ./keyfile:/etc/keyfile
       - ./replication-mongo.sh:/start.sh
     command: bash start.sh
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 123456
     ports:
       - 27018:27017
   mongo2:
@@ -32,8 +26,5 @@ services:
       - ./keyfile:/etc/keyfile
       - ./replication-mongo.sh:/start.sh
     command: bash start.sh
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 123456
     ports:
       - 27019:27017
